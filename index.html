@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Task Manager</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(reg => console.log('✅ Service Worker Registered', reg))
+                    .catch(err => console.error('❌ Service Worker Registration Failed', err));
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 Voice Task Manager</h1>
+        <p class="subtitle">Record your meeting and get tasks & events auto-generated! 📌</p>
+
+        <div class="buttons">
+            <button id="start-recording">▶️ Start Recording</button>
+            <button id="stop-recording" disabled>⏹️ Stop Recording</button>
+        </div>
+
+        <h2>📜 Transcription:</h2>
+        <div class="transcript-box">
+            <p id="transcript">🎙️ Say something...</p>
+        </div>
+
+        <h2>📅 Extracted Information:</h2>
+        <div class="results">
+            <div class="info-box">
+                <h3>🗓️ Meeting Info</h3>
+                <p id="meeting-info"></p>
+            </div>
+            <div class="info-box">
+                <h3>📝 Task Info</h3>
+                <p id="task-info"></p>
+            </div>
+            <div class="info-box">
+                <h3>⏰ Reminder Info</h3>
+                <p id="reminder-info"></p>
+            </div>
+        </div>
+
+        <h2>✅ Summary:</h2>
+        <div class="summary-box">
+            <p id="summary-content">No summary available yet.</p>
+        </div>
+
+        <button id="send-email">📧 Send Summary to Email</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
