@@ -21,6 +21,7 @@ APIs Used:
 🎬 Demo
 📹 Click here to watch the demo video
 (5-minute walkthrough showing features, architecture, and challenges faced)
+https://drive.google.com/file/d/1eU0HWFJmelUnHMQmriOK1rctJ54DEYPJ/view?usp=sharing
 
 
 🧩 Project Architecture
@@ -49,5 +50,5 @@ This project is licensed under the MIT License.
 Pull requests are welcome! For significant changes, please open an issue first to discuss what you'd like to change.
 
 🚀 Let's Connect
-💼 LinkedIn: Your Profile
-📧 Email: your.email@example.com
+💼 LinkedIn: https://www.linkedin.com/in/mohammad-kavish/
+📧 Email: mohammadkavish979@gmail.com
